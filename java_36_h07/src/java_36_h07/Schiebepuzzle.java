@@ -62,15 +62,17 @@ public class Schiebepuzzle {
     		if(i < 1 || i > 15) {
     			throw new WrongNumberException("i must be between 1 and 15");
     		}else {
-//    			int indexOfI = this.board.indexOf(i);
-//    			int indexOfEmptyField = this.board.indexOf(0);
-//    			if(indexOfI + 1 == indexOfEmptyField || indexOfI - 1 == indexOfEmptyField || indexOfI - 4 == indexOfEmptyField || indexOfI + 4 == indexOfEmptyField ) {
-//    				return true;
-//    			}else {
-//    				return false;
-    			int index = this.board.indexOf(0);
-            	boolean b = ( (i == index-1) || (i == index +1) || (i == index+4) || (i == index-4) );
-            	return b;
+    			int indexOfI = this.board.indexOf(i);
+    			int indexOfEmptyField = this.board.indexOf(0);
+    			if(indexOfI + 1 == indexOfEmptyField || indexOfI - 1 == indexOfEmptyField || indexOfI - 4 == indexOfEmptyField || indexOfI + 4 == indexOfEmptyField ) {
+    				return true;
+    			}else {
+    				return false;
+    			}
+//    			int indexOf_0 = this.board.indexOf(0);
+//    			int indexOf_I = this.board.indexOf(i);
+//            	boolean b = ( (indexOf_I -1 == indexOf_0) || (indexOf_I +1 == indexOf_0 ) || (indexOf_I -4== indexOf_0) || (indexOf_I +4 == indexOf_0) );
+//            	return b;
     			}
     		}
     	
